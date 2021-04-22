@@ -1,0 +1,28 @@
+#number guessing
+import random
+import math
+
+broj_sansi = int(input("Unesite broj mogucih pokusaja: "))
+
+donja = int(input("Unesite donju granicu: "))
+gornja = int(input("Unesite gornju granicu: "))
+zamisljeni_broj = random.randint(donja, gornja)
+
+print("Imate ",broj_sansi, " sanse")
+i = 0
+while (i < broj_sansi):
+  n = int(input("Pogodite broj:"))
+  if(n == zamisljeni_broj):
+    print("Pogodili ste broj! Cestitamo!")
+    break
+  elif(n < zamisljeni_broj):
+    print("Broj je veci")
+  elif( n > zamisljeni_broj):
+    print("Broj je manji")
+  i = i+1 
+  if(i == broj_sansi):
+    print("Iskoristili ste sve moguce pokusaje!")
+  elif( i < broj_sansi):
+    brojpokusaja = broj_sansi-i
+    print("Ostalo vam je jos", brojpokusaja," pokusaja")
+         
