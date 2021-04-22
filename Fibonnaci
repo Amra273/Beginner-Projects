@@ -1,0 +1,21 @@
+n = int(input("Unesite duzinu sekvence:"))
+
+prvi = 0
+drugi = 1
+
+#provjera unesenog broja
+
+if(n < 0):
+    print("Broj mora biti pozitivan!")
+elif(n == 1):
+    print("Fibonaccijeva sekvenca do 1 iznosi ",n)
+else:
+    brojac = 0
+    print("Fibonnacijeva sekvenca do ",n,"je:\n")
+    while(brojac < n):
+      print(prvi)
+      suma = prvi+drugi
+      prvi = drugi 
+      drugi = suma
+      brojac = brojac+1
+        
